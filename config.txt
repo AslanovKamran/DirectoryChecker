@@ -1,0 +1,2 @@
+﻿DirectoryPath = D:\VS\WpfDirectoryChechkerApp\Assets
+Frequency = 1
