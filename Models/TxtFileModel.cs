@@ -17,7 +17,7 @@ namespace WpfDirectoryChechkerApp.Models
 			{
                 
                string[] lines = File.ReadAllLines(this.FilePath);
-                return $"Processed Txt file: {FilePath}\n" + " " + string.Join("", lines); 
+               return $"Processed Txt file: {FilePath}\n" + " " + string.Join("", lines); 
             }
             catch (Exception ex)
 			{

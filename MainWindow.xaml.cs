@@ -101,6 +101,7 @@ namespace WpfDirectoryChechkerApp
 
 		private void StartMonitoring()
 		{
+			//333Change to your particular directory
 			string configFilePath = @$"D:\VS\WpfDirectoryChechkerApp\config.txt";
 			string directoryPath = string.Empty;
 			int monitoringFrequency = 5;

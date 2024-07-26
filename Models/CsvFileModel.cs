@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Microsoft.VisualBasic.FileIO;
 using WpfDirectoryChechkerApp.Abstract;
 
@@ -18,24 +19,24 @@ namespace WpfDirectoryChechkerApp.Models
                 {
                     parser.TextFieldType = FieldType.Delimited;
                     parser.SetDelimiters(",");
-
-                    string result = $"Processed CSV file: {FilePath}\n";
+                    StringBuilder result = new StringBuilder();
+                    result.Append($"Processed CSV file: {FilePath}\n");
 
                     // Read header fields
                     if (!parser.EndOfData)
                     {
                         string[] headers = parser.ReadFields()!;
-                        result += $"Headers: {string.Join(", ", headers)}\n";
+                        result.Append($"Headers: {string.Join(", ", headers)}\n");
                     }
 
                     // Read all lines
                     while (!parser.EndOfData)
                     {
                         string[] fields = parser.ReadFields()!;
-                        result += $"{string.Join(", ", fields)}\n";
+                        result.Append($"{string.Join(", ", fields)}\n");
                     }
 
-                    return result;
+                    return result.ToString();
                 }
             }
             catch (Exception ex)

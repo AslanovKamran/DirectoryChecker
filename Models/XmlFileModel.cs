@@ -17,7 +17,7 @@ namespace WpfDirectoryChechkerApp.Models
             {
                 XDocument xdoc = XDocument.Load(FilePath);
                 StringBuilder result = new StringBuilder();
-               result.Append ( $"Processed XML file: {FilePath}\n");
+                result.Append ( $"Processed XML file: {FilePath}\n");
 
                 // Example: Display root element name and its children
                 XElement root = xdoc.Root!;
